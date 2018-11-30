@@ -8,6 +8,10 @@ LINUX_FIRMWARE_VERSION = a3a26af24e29c818ef9b5661856018e21a5c49fb
 LINUX_FIRMWARE_SITE = http://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 LINUX_FIRMWARE_SITE_METHOD = git
 
+ifeq ($(BR2_PACKAGE_LINUX_FIRMWARE_ATHEROS_3011),y)
+LINUX_FIRMWARE_FILES += ath3k-1.fw
+endif
+
 # Intel SST DSP
 ifeq ($(BR2_PACKAGE_LINUX_FIRMWARE_INTEL_SST_DSP),y)
 LINUX_FIRMWARE_FILES += intel/fw_sst_0f28.bin-48kHz_i2s_master

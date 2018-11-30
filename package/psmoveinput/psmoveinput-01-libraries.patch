@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3c28012..0af6ffa 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -38,8 +38,8 @@ set (CMAKE_LINKER_FLAGS -ldl)
+ set (CMAKE_CXX_FLAGS_RELWITHDEBINFO "${COMMON_CXX_FLAGS} -ggdb")
+ set (CMAKE_CXX_FLAGS_RELEASE ${COMMON_CXX_FLAGS})
+ set (COMMON_LINK_LIBS psmoveapi
+-                      boost_thread-mt
+-                      boost_program_options-mt
++                      boost_thread
++                      boost_program_options
+                       boost_system
+                       rt)
+ 

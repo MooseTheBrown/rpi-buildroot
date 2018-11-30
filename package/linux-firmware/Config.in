@@ -8,6 +8,15 @@ config BR2_PACKAGE_LINUX_FIRMWARE
 
 if BR2_PACKAGE_LINUX_FIRMWARE
 
+menu "USB firmware"
+
+config BR2_PACKAGE_LINUX_FIRMWARE_ATHEROS_3011
+	bool "Atheros 3011"
+	help
+	  ath3k firmware for Atheros 3011 Bluetooth dongle
+
+endmenu # "USB"
+
 menu "Audio firmware"
 
 config BR2_PACKAGE_LINUX_FIRMWARE_INTEL_SST_DSP
