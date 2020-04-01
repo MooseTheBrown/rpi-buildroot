@@ -1,0 +1,14 @@
+[Unit]
+Description=WPA supplicant
+Before=network.target
+Wants=network.target
+Wants=systemd-rfkill.service
+After=systemd-rfkill.service
+
+[Service]
+Type=exec
+ExecStartPre=/bin/sleep 1 ; /bin/rfkill unblock all
+ExecStart=/sbin/wpa_supplicant -i wlan0 -c /etc/wpa_supplicant_moosenet.conf
+
+[Install]
+WantedBy=multi-user.target
